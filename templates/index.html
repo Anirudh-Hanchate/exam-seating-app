@@ -414,7 +414,7 @@
                 });
 
                 try {
-                    const response = await fetch("http://127.0.0.1:5000/api/generate-allotment", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(allotmentData) });
+                    const response = await fetch("/api/generate-allotment", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(allotmentData) });
                     const result = await response.json();
                     if (response.ok && result.status === "success") {
                         statusContainer.innerHTML = "";
